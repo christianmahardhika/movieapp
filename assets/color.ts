@@ -1,0 +1,8 @@
+export default class Color {
+    PURPLE_HEART_DARK = "#5B16D0";
+    PURPLE_HEART_LIGHT = "#5B16D0";
+    COLD_PURPLE = "#B4B0E0";
+    BLUE_MARGUERITE = "#6861C1";
+    CARROT_ORANGE = "#F29A22";
+    BANANA_MANIA = "#FCDFAB";
+}
