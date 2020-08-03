@@ -1,4 +1,4 @@
-export type Result = {
+export type Movie = {
     popularity: number;
     vote_count: number;
     video: boolean;
@@ -13,11 +13,4 @@ export type Result = {
     vote_average: number;
     overview: string;
     release_date: string;
-}
-
-export type RootObject = {
-    page: number;
-    total_results: number;
-    total_pages: number;
-    results: Result[];
 }

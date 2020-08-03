@@ -14,7 +14,7 @@
 import Vue from "vue";
 import { mapActions } from "vuex";
 import { Action } from "vuex-module-decorators";
-import { movieStore } from "~/store";
+import { moviesModule } from "~/store";
 
 export default Vue.extend({
   data() {
@@ -23,11 +23,11 @@ export default Vue.extend({
   },
   computed: {
     getList() {
-      return movieStore.list
-  }
+      return moviesModule.movies
+    }
   },
   async created() {
-    movieStore.getMovieDisc()
+    moviesModule.getMovies()
   },
 });
 </script>
