@@ -10,7 +10,7 @@ export async function fetchMovies(): Promise<BaseResponse<Movie[]>> {
         'sort_by': 'popularity.desc',
         'include_adult': false,
         'include_video': false,
-        'page': 10
+        'page': 1
       })
     }
   )
