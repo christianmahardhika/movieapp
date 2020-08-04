@@ -1,12 +1,12 @@
 /* eslint-disable import/no-mutable-exports */
 import { Store } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
-import MovieDiscModule from '~/store/MovieDiscModule'
+import MovieModule from '~/store/moviediscover/domain/MovieModule'
 
-let movieStore: MovieDiscModule
+let movieModule: MovieModule
 
 function initialiseStores(store: Store<any>): void {
-  movieStore = getModule(MovieDiscModule, store)
+  movieModule = getModule(MovieModule, store)
 }
 
-export { initialiseStores, movieStore }
+export { initialiseStores, movieModule }
