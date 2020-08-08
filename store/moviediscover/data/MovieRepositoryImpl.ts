@@ -1,7 +1,7 @@
-import { MovieRepository } from "../domain/MovieRepository";
 import { BaseResponse } from "~/store/api/response/BaseResponse";
 import { Api, customParams } from "~/store/api/ApiProvider";
 import { Movie } from "./Movie";
+import { MovieRepository } from "../domain/MovieRepository";
 
 const movieRepository: MovieRepository = {
     async fetchMovies(): Promise<BaseResponse<Movie[]>> {

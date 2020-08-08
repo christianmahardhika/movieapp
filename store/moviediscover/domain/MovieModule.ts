@@ -1,6 +1,6 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
 import { Movie } from '~/store/moviediscover/data/Movie'
-import movieRepository from '../data/MovieRepositroyImpl';
+import movieRepository from '../data/MovieRepositoryImpl';
 
 @Module({name: 'moviediscover/domain/MovieModule', stateFactory: true, namespaced: true })
 class MovieModule extends VuexModule {
