@@ -5,7 +5,7 @@ import movieRepository from '../data/MovieRepositoryImpl';
 @Module({name: 'moviediscover/domain/MovieModule', stateFactory: true, namespaced: true })
 class MovieModule extends VuexModule {
 
-    listMovie: Array<Movie> = []
+    private listMovie: Array<Movie> = []
 
     get movies() {
         return this.listMovie;
