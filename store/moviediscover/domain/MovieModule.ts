@@ -1,6 +1,6 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
 import { Movie } from '~/store/moviediscover/data/Movie'
-import { fetchMovies } from '../data/MovieRepository';
+import movieRepository from '../data/MovieRepositoryImpl';
 
 @Module({name: 'moviediscover/domain/MovieModule', stateFactory: true, namespaced: true })
 class MovieModule extends VuexModule {
@@ -18,9 +18,10 @@ class MovieModule extends VuexModule {
 
     @Action
     getMovies() {
-        fetchMovies()
+        movieRepository
+        .fetchMovies()
         .then( response => { this.setMovies(response.results) })
-        .catch( _ => { console.log('error cuk!' ) })
+        .catch( error => { console.log(error) })
     }
 }
 
